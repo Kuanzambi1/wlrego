@@ -1,0 +1,6 @@
+{
+  "name": "W. Rego Lda",
+  "description": "Website institucional e de marcação de presença digital da W. REGO - Comércio Geral e Prestação de Serviços, Lda. Apresentação de portfólio, serviços de redes, arquitetura, comércio geral e mais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
