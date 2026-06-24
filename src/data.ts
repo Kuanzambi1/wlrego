@@ -7,68 +7,84 @@ import proj5Img from './assets/images/portfolio/proj-5.jpg';
 
 export const SERVICES: Service[] = [
   {
-    id: 'networks',
-    title: 'Redes, Telecomunicações e Informática',
-    category: 'networks',
-    shortDescription: 'Criação de infraestruturas de comunicação robustas, redes de dados estruturadas e soluções tecnológicas corporativas.',
-    longDescription: 'Projetamos e implementamos soluções avançadas de conectividade para garantir que a sua empresa opere com a máxima velocidade, segurança e fiabilidade. Da cablagem estruturada técnica ao suporte de servidores empresariais e segurança na nuvem.',
-    iconName: 'Network',
+    id: 'infraestruturas',
+    title: 'Infraestruturas e Obras Públicas',
+    category: 'infraestruturas',
+    shortDescription: 'Prestação de serviços de construção civil e obras públicas, fiscalização e auditoria.',
+    longDescription: 'Prestação de serviços de construção civil e obras públicas, fiscalização, consultoria, auditoria, contabilidade e gestão de projetos. Inclui-se também o saneamento básico e a instalação de sistemas de tratamento e purificação de água.',
+    iconName: 'Building',
     features: [
-      'Cablagem estruturada (Cobre, Fibra Óptica e Sem Fios)',
-      'Configuração de servidores ativos e gateways de segurança',
-      'Infraestrutura de datacenter de média e grande escala',
-      'Sistemas de videovigilância IP (CCTV) e controlo de acessos',
-      'Manutenção preventiva e corretiva de sistemas de TI'
+      'Construção civil e obras públicas',
+      'Fiscalização e consultoria',
+      'Auditoria, contabilidade e gestão de projetos',
+      'Saneamento básico',
+      'Instalação de sistemas de tratamento e purificação de água'
     ],
     imagePlaceholder: 'bg-emerald-50 text-emerald-600'
   },
   {
-    id: 'architecture',
-    title: 'Arquitetura, Engenharia e Construção',
-    category: 'architecture',
-    shortDescription: 'Planeamento urbano, design arquitetónico contemporâneo, engenharia de estruturas e fiscalização de obras.',
-    longDescription: 'Unimos estética, funcionalidade e regulamentação portuguesa/angolana para criar espaços inspiradores e seguros. Cuidamos de todo o ciclo de vida do seu edifício, desde o estudo de viabilidade, representação 3D, projetos de especialidades até à entrega final.',
-    iconName: 'Building',
+    id: 'urbanos',
+    title: 'Serviços Urbanos e Manutenção',
+    category: 'urbanos',
+    shortDescription: 'Serviços de limpeza, recolha de resíduos e manutenção de espaços e sistemas.',
+    longDescription: 'Realização de serviços de limpeza e recolha de residuos solidos nas vias do município, limpeza industrial e semi-industrial, jardinagem, manutenção de espaços verdes, instalação e manutenção de sistemas de ar condicionado, materiais elétricos e de segurança (CCTV).',
+    iconName: 'Settings',
     features: [
-      'Projetos arquitetónicos residenciais, comerciais e industriais',
-      'Modelagem 3D, renders de alta fidelidade e realidade virtual',
-      'Projetos de engenharia de especialidades (Água, Saneamento, Eletrecidade)',
-      'Remodelação de interiores e reabilitação de edifícios',
-      'Direção, gestão e fiscalização técnica de obras civis'
+      'Limpeza e recolha de resíduos sólidos',
+      'Limpeza industrial e semi-industrial',
+      'Jardinagem e manutenção de espaços verdes',
+      'Manutenção de sistemas de ar condicionado',
+      'Instalação de materiais elétricos e de segurança (CCTV)'
     ],
     imagePlaceholder: 'bg-teal-50 text-teal-600'
   },
   {
-    id: 'commerce',
-    title: 'Comércio Geral e Fornecimento de Equipamentos',
-    category: 'commerce',
-    shortDescription: 'Importação, exportação de consumíveis de grande escala, e fornecimento oficial de hardware e software.',
-    longDescription: 'Como parceiro estratégico de comércio geral, fornecemos com agilidade e conformidade legal equipamentos de tecnologia, materiais de escritório, componentes industriais e elétricos de marcas líderes globais, garantindo elevados padrões de qualidade de fornecimento.',
-    iconName: 'ShoppingCart',
+    id: 'tecnologia',
+    title: 'Tecnologia e Modernização',
+    category: 'tecnologia',
+    shortDescription: 'Desenvolvimento de software e gestão de projetos de tecnologias de informação.',
+    longDescription: 'Desenvolvimento de software, serviços de impressão gráfica, gestão de projetos de tecnologias de informação e telecomunicações, visando a modernização dos serviços administrativos.',
+    iconName: 'Network',
     features: [
-      'Distribuição e fornecimento de equipamento informático e de servidores',
-      'Importação de materiais de construção e acabamento premium',
-      'Fornecimento de frotas e soluções corporativas customizadas',
-      'Gestão integrada da cadeia logística e alfandegária',
-      'Garantia oficial direta com os principais fabricantes internacionais'
+      'Desenvolvimento de software',
+      'Serviços de impressão gráfica',
+      'Gestão de projetos de TI',
+      'Projetos de telecomunicações',
+      'Modernização dos serviços administrativos'
     ],
     imagePlaceholder: 'bg-indigo-50 text-indigo-600'
   },
   {
-    id: 'consulting',
-    title: 'Consultoria de Projetos e Serviços Integrados',
-    category: 'consulting',
-    shortDescription: 'Assessoria técnica, licenciamento de atividades, assistência pós-venda, auditoria de redes e eficiência energética.',
-    longDescription: 'Ajudamos a sua empresa a tomar decisões informadas com base na nossa experiência multidisciplinar. Avaliamos riscos de conformidade arquitetónica, realizamos auditorias de vulnerabilidade cibernética e otimizamos fluxos de trabalho.',
-    iconName: 'FileCheck',
+    id: 'social',
+    title: 'Desenvolvimento Social e Comunitário',
+    category: 'social',
+    shortDescription: 'Formação profissional e promoção de atividades de lazer e bem-estar.',
+    longDescription: 'Serviços de formação profissional, promoção de eventos culturais e desportivos, e exploração de atividades de lazer e bem-estar, como ginásios e projetos de parques de diversão.',
+    iconName: 'Users',
     features: [
-      'Auditoria de redes corporativas e cibersegurança empresarial',
-      'Licenciamento camarário de estabelecimentos e obras complexas',
-      'Consultoria de eficiência térmica, acústica e sustentabilidade de edifícios',
-      'Estudos de impacto ambiental e impacto de vizinhança',
-      'Planos de contingência de TI e Business Continuity (DRP)'
+      'Serviços de formação profissional',
+      'Promoção de eventos culturais e desportivos',
+      'Exploração de atividades de lazer',
+      'Gestão de ginásios e bem-estar',
+      'Projetos de parques de diversão'
     ],
     imagePlaceholder: 'bg-blue-50 text-blue-600'
+  },
+  {
+    id: 'fornecimento',
+    title: 'Fornecimento Geral de Bens',
+    category: 'fornecimento',
+    shortDescription: 'Comércio e fornecimento de produtos essenciais e materiais diversos.',
+    longDescription: 'Comércio e fornecimento de uma vasta gama de produtos essenciais, incluindo material de escritório, equipamentos hospitalares, medicamentos, produtos de limpeza e higiene, materiais de construção, e géneros alimentares.',
+    iconName: 'ShoppingCart',
+    features: [
+      'Fornecimento de material de escritório',
+      'Equipamentos hospitalares e medicamentos',
+      'Produtos de limpeza e higiene',
+      'Fornecimento de materiais de construção',
+      'Comércio de géneros alimentares'
+    ],
+    imagePlaceholder: 'bg-orange-50 text-orange-600'
   }
 ];
 
@@ -170,21 +186,6 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   }
 ];
 
-export const QUOTE_OPTIONS: QuoteOption[] = [
-  // Redes
-  { id: 'net-point', name: 'Instalação e Certificação de Ponto de Rede (Cat6A)', category: 'Redes e Informática', basePrice: 45, unitName: 'pontos', minUnits: 5 },
-  { id: 'net-switch', name: 'Configuração de Switch Gerível / Routing / VLAN', category: 'Redes e Informática', basePrice: 250, unitName: 'dispositivo', minUnits: 1 },
-  { id: 'net-ap', name: 'Ponto de Acesso Profissional Wi-Fi 6 com Gestão Cloud', category: 'Redes e Informática', basePrice: 180, unitName: 'pontos de acesso', minUnits: 2 },
-  { id: 'net-rack', name: 'Montagem e Organização de Bastidor Técnico / Rack TI', category: 'Redes e Informática', basePrice: 500, unitName: 'bastidores', minUnits: 1 },
-  // Arquitetura
-  { id: 'arch-project', name: 'Desenho de Projeto de Arquitetura (Estudo Prévio ao Licenciamento)', category: 'Arquitetura e Engenharia', basePrice: 18, unitName: 'm² de área', minUnits: 80 },
-  { id: 'arch-render', name: 'Renderização 3D Fotorrealista e Animação de Ambientes', category: 'Arquitetura e Engenharia', basePrice: 150, unitName: 'ambientes gerados', minUnits: 2 },
-  { id: 'arch-supervision', name: 'Fiscalização e Direção Técnica de Obra', category: 'Arquitetura e Engenharia', basePrice: 850, unitName: 'meses de obra', minUnits: 1 },
-  // Comércio Geral
-  { id: 'comm-it-setup', name: 'Posto de Trabalho Completo (Estação HP/Dell + Monitor + UPS)', category: 'Comércio Geral', basePrice: 1100, unitName: 'computadores', minUnits: 3 },
-  { id: 'comm-ups-office', name: 'Sistema de Proteção e Sistema de Emergência Redundante (UPS 3kVA)', category: 'Comércio Geral', basePrice: 850, unitName: 'unidades', minUnits: 1 }
-];
-
 export const COMPANY_STATS = [
   { value: '10+', label: 'Anos de Atividade', description: 'De experiência combinada com fundadores experientes.' },
   { value: '150+', label: 'Projetos Concluídos', description: 'Infraestruturas, edifícios e fornecimentos corporativos.' },
@@ -194,7 +195,7 @@ export const COMPANY_STATS = [
 
 export const FAQ_ITEMS = [
   {
-    question: 'A W. REGO atua fora de Luanda?',
+    question: 'A W.L. REGO atua fora de Luanda?',
     answer: 'Sim. Embora tenhamos a nossa sede principal em Luanda, temos parceiros e capacidade logística para efetuar entregas de comércio, projetos de arquitetura e infraestruturas em todas as províncias de Angola e na região da CPLP.'
   },
   {
@@ -207,6 +208,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'Como posso solicitar cotações de material corporativo em grande escala?',
-    answer: 'Pode contactar a nossa equipa comercial usando o formulário abaixo ou diretamente via o nosso e-mail ou telefone. Também criámos um Simulador Interativo nesta página onde pode fazer uma estimativa inicial dos seus projetos e enviar-nos diretamente.'
+    answer: 'Pode contactar a nossa equipa comercial usando o formulário de contacto abaixo ou diretamente via e-mail ou telefone. Iremos analisar o seu caderno de encargos e apresentar uma proposta detalhada.'
   }
 ];

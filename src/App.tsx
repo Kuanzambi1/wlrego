@@ -8,15 +8,13 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
-import QuoteSimulator from './components/QuoteSimulator';
+
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
-  const [selectedSimulatorCategory, setSelectedSimulatorCategory] = useState('');
-  const [prepopulatedMessage, setPrepopulatedMessage] = useState('');
 
   // 1. Navigation with offset prevention (accounting for fixed header size)
   const handleNavigate = (sectionId: string) => {
@@ -39,7 +37,7 @@ export default function App() {
   // 2. Scroll spying to automatically update active header indicators on manual scroll
   useEffect(() => {
     const handleScrollSpy = () => {
-      const sections = ['home', 'services', 'portfolio', 'simulator', 'about', 'contact'];
+      const sections = ['home', 'services', 'portfolio', 'about', 'contact'];
       const scrollPosition = window.scrollY + 120; // offset anchor
 
       for (const sect of sections) {
@@ -59,23 +57,6 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScrollSpy);
   }, []);
 
-  // 3. Forward formatted quote from QuoteSimulator directly to form
-  const handleForwardQuoteToContact = (message: string) => {
-    setPrepopulatedMessage(message);
-    // Smoothly scroll down to contact section
-    setTimeout(() => {
-      handleNavigate('contact');
-    }, 100);
-  };
-
-  const handleClearPrepopulatedMessage = () => {
-    setPrepopulatedMessage('');
-  };
-
-  const handleServiceSelectCategory = (category: string) => {
-    setSelectedSimulatorCategory(category);
-  };
-
   return (
     <div className="min-h-screen flex flex-col font-sans antialiased text-gray-900 bg-gray-50 selection:bg-brand-teal/20 selection:text-white">
       
@@ -89,28 +70,18 @@ export default function App() {
         <Hero onNavigate={handleNavigate} />
 
         {/* Detailed Services list with custom modals */}
-        <Services
-          onSelectCategory={handleServiceSelectCategory}
-          onNavigate={handleNavigate}
-        />
+        <Services onNavigate={handleNavigate} />
 
         {/* Dynamic Project Portfolio Grid */}
         <Portfolio />
 
-        {/* Interactive Quote calculation panel */}
-        <QuoteSimulator
-          selectedCategory={selectedSimulatorCategory}
-          onNavigateToContact={handleForwardQuoteToContact}
-        />
+
 
         {/* Vision/Mission context & Frequently Answered Questions (FAQ) */}
         <About />
 
         {/* Contact form desk accompanied by custom vector roadmap */}
-        <Contact
-          prepopulatedMessage={prepopulatedMessage}
-          onClearPrepopulate={handleClearPrepopulatedMessage}
-        />
+        <Contact />
 
       </main>
 

@@ -5,13 +5,12 @@ import { SERVICES } from '../data';
 import { Service } from '../types';
 
 interface ServicesProps {
-  onSelectCategory: (category: string) => void;
   onNavigate: (sectionId: string) => void;
 }
 
-export default function Services({ onSelectCategory, onNavigate }: ServicesProps) {
+export default function Services({ onNavigate }: ServicesProps) {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [activeFilter, setActiveFilter] = useState<'all' | 'networks' | 'architecture' | 'commerce' | 'consulting'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'infraestruturas' | 'urbanos' | 'tecnologia' | 'social' | 'fornecimento'>('all');
 
   // Dynamic Lucide-react Icon Resolver
   const renderIcon = (iconName: string, className = "w-6 h-6") => {
@@ -24,22 +23,17 @@ export default function Services({ onSelectCategory, onNavigate }: ServicesProps
 
   const filters = [
     { id: 'all', label: 'Todos os Serviços' },
-    { id: 'networks', label: 'Redes e TI' },
-    { id: 'architecture', label: 'Arquitetura e Civil' },
-    { id: 'commerce', label: 'Comércio e Hardware' },
-    { id: 'consulting', label: 'Consultoria' },
+    { id: 'infraestruturas', label: 'Infraestruturas' },
+    { id: 'urbanos', label: 'Serviços Urbanos' },
+    { id: 'tecnologia', label: 'Tecnologia' },
+    { id: 'social', label: 'Desenvolvimento Social' },
+    { id: 'fornecimento', label: 'Fornecimento' },
   ] as const;
 
   const filteredServices = SERVICES.filter(s => {
     if (activeFilter === 'all') return true;
     return s.category === activeFilter;
   });
-
-  const handleSimulateCategory = (serviceCat: string) => {
-    onSelectCategory(serviceCat);
-    setSelectedService(null);
-    onNavigate('simulator');
-  };
 
   return (
     <section id="services" className="py-16 md:py-24 bg-gray-50 relative overflow-hidden">
@@ -102,10 +96,11 @@ export default function Services({ onSelectCategory, onNavigate }: ServicesProps
                   
                   {/* Category Pill Tag */}
                   <span className="text-[10px] font-mono font-bold tracking-wider uppercase px-2 py-0.5 rounded-full bg-gray-100 text-[#00969B]">
-                    {service.category === 'networks' && 'REDES & TI'}
-                    {service.category === 'architecture' && 'ARQUITETURA'}
-                    {service.category === 'commerce' && 'COMÉRCIO GERAL'}
-                    {service.category === 'consulting' && 'CONSULTORIA'}
+                    {service.category === 'infraestruturas' && 'INFRAESTRUTURAS'}
+                    {service.category === 'urbanos' && 'URBANOS'}
+                    {service.category === 'tecnologia' && 'TECNOLOGIA'}
+                    {service.category === 'social' && 'SOCIAL'}
+                    {service.category === 'fornecimento' && 'FORNECIMENTO'}
                   </span>
                 </div>
 
@@ -141,19 +136,6 @@ export default function Services({ onSelectCategory, onNavigate }: ServicesProps
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* More details info banner */}
-        <div className="mt-12 text-center">
-          <p className="text-xs text-gray-500">
-            Fornecemos serviços sob medida e faturados detalhadamente. Tem um caderno de encargos específico? Efetue um primeiro cálculo no nosso{' '}
-            <button
-              onClick={() => onNavigate('simulator')}
-              className="text-[#00969B] cursor-pointer font-bold underline hover:text-gray-900 transition-colors"
-            >
-              Simulador Técnico Interativo
-            </button>.
-          </p>
         </div>
 
       </div>
@@ -255,10 +237,13 @@ export default function Services({ onSelectCategory, onNavigate }: ServicesProps
                 </button>
                 <div className="flex gap-2 w-full sm:w-auto">
                   <button
-                    onClick={() => handleSimulateCategory(selectedService.id)}
+                    onClick={() => {
+                      setSelectedService(null);
+                      onNavigate('contact');
+                    }}
                     className="w-full sm:w-auto px-5 py-2.5 bg-[#00969B] text-black font-extrabold text-xs rounded-xl hover:bg-[#007a7d] transition-colors shadow-md uppercase tracking-wider"
                   >
-                    Simular Custo Inicial
+                    Solicitar Proposta
                   </button>
                 </div>
               </div>

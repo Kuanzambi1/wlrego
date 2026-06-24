@@ -14,18 +14,17 @@ export default function Footer({ onNavigate }: FooterProps) {
   };
 
   const serviceCategories = [
-    { label: 'Redes e Telecomunicações', id: 'services' },
-    { label: 'Projetos Arquitetónicos', id: 'services' },
-    { label: 'Construção e Engenharia', id: 'services' },
-    { label: 'Comércio Geral e Logística', id: 'services' },
-    { label: 'Fornecimento Tecnológico', id: 'services' },
+    { label: 'Infraestruturas e Obras Públicas', id: 'services' },
+    { label: 'Serviços Urbanos e Manutenção', id: 'services' },
+    { label: 'Tecnologia e Modernização', id: 'services' },
+    { label: 'Desenvolvimento Social', id: 'services' },
+    { label: 'Fornecimento Geral de Bens', id: 'services' },
   ];
 
   const quickLinks = [
     { label: 'Início', id: 'home' },
     { label: 'Serviços', id: 'services' },
     { label: 'Portfólio', id: 'portfolio' },
-    { label: 'Simulador', id: 'simulator' },
     { label: 'Sobre Nós', id: 'about' },
     { label: 'Contacto', id: 'contact' },
   ];
@@ -49,7 +48,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <Logo className="h-10" />
               <div className="ml-2 text-left">
                 <span className="text-[10px] block font-semibold text-[#4A9D2E] tracking-wider uppercase font-display">
-                  W. REGO Lda
+                  WL. REGO Lda
                 </span>
                 <span className="text-[8px] block text-gray-400 tracking-widest font-bold">
                   COMÉRCIO GERAL & SERVIÇOS
@@ -58,16 +57,16 @@ export default function Footer({ onNavigate }: FooterProps) {
             </div>
 
             <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed">
-              Respostas multidisciplinares sob medida em Angola. Projetamos infraestruturas de telecomunicações de alta tecnologia, certificamos redes corporativas, desenhamos projetos arquitetónicos inovadores e garantimos o fornecimento ágil de hardware comercial.
+              Respostas multidisciplinares sob medida em Angola. Oferecemos soluções integradas nas áreas de infraestruturas, manutenção urbana, modernização tecnológica, desenvolvimento comunitário e fornecimento geral.
             </p>
 
             {/* Quick validation indicators */}
             <div className="flex flex-wrap items-center gap-2 text-[10px] text-gray-500 font-mono">
               <span className="px-2 py-0.5 bg-white border border-gray-200 rounded-sm">
-                NIF: 5417282025
+                NIF: 5002823454
               </span>
               <span className="px-2 py-0.5 bg-white border border-gray-200 rounded-sm">
-                Luanda, AO
+                Ingombota, Luanda
               </span>
               <span className="px-2 py-0.5 bg-white border border-gray-200 rounded-sm">
                 Alvará Civil Ativo
@@ -158,7 +157,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="flex items-center gap-1">
             <Copyright className="w-4 h-4 text-gray-400 shrink-0" />
             <span>
-              {currentYear} <strong>W. REGO - Comércio Geral e Prestação de Serviços Lda</strong>. Todos os direitos reservados.
+              {currentYear} <strong>W.L. REGO - COMÉRCIO GERAL & PRESTAÇÃO DE SERVIÇOS, LDA</strong>. Todos os direitos reservados.
             </span>
           </div>
 

@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Clock, Send, Landmark, CheckCircle, Copy, Check } from 'lucide-react';
 
-interface ContactProps {
-  prepopulatedMessage: string;
-  onClearPrepopulate: () => void;
-}
-
-export default function Contact({ prepopulatedMessage, onClearPrepopulate }: ContactProps) {
+export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,21 +16,7 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [copiedCoords, setCopiedCoords] = useState(false);
 
-  // Set prepopulated message if transferred from Quote Simulator
-  useEffect(() => {
-    if (prepopulatedMessage) {
-      setFormData(prev => ({
-        ...prev,
-        message: prepopulatedMessage,
-        subject: 'Simulação de Orçamento Integrada'
-      }));
-      // Smooth scroll target directly into view
-      const elem = document.getElementById('contact');
-      if (elem) {
-        elem.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [prepopulatedMessage]);
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -57,7 +38,6 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
-      onClearPrepopulate(); // Clear parent state
     }, 1800);
   };
 
@@ -118,11 +98,8 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
                   </div>
                   <div className="space-y-0.5">
                     <span className="text-[10px] text-slate-400 block uppercase font-mono font-bold">Ligar e WhatsApp</span>
-                    <a href="tel:+244923000000" className="text-xs sm:text-sm font-semibold text-white hover:text-[#00969B] hover:underline block">
-                      +244 923 000 000
-                    </a>
-                    <a href="tel:+244912000000" className="text-xs font-semibold text-slate-400 block">
-                      +244 912 000 000
+                    <a href="tel:+244923913392" className="text-xs sm:text-sm font-semibold text-white hover:text-[#00969B] hover:underline block">
+                      +244 923 913 392
                     </a>
                   </div>
                 </div>
@@ -134,11 +111,8 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
                   </div>
                   <div className="space-y-0.5">
                     <span className="text-[10px] text-slate-400 block uppercase font-mono font-bold">Correio Eletrónico</span>
-                    <a href="mailto:geral@wrego.co.ao" className="text-xs sm:text-sm font-semibold text-white hover:text-[#00969B] hover:underline block truncate">
-                      geral@wrego.co.ao
-                    </a>
-                    <a href="mailto:comercial@wrego.co.ao" className="text-xs font-semibold text-slate-400 block truncate font-light">
-                      comercial@wrego.co.ao
+                    <a href="mailto:geralwlrego@gmail.com" className="text-xs sm:text-sm font-semibold text-white hover:text-[#00969B] hover:underline block truncate">
+                      geralwlrego@gmail.com
                     </a>
                   </div>
                 </div>
@@ -151,7 +125,7 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
                   <div className="space-y-0.5">
                     <span className="text-[10px] text-slate-400 block uppercase font-mono font-bold">Sede e Escritório</span>
                     <p className="text-xs sm:text-sm font-semibold text-white leading-snug">
-                      Edifício W-Corporate, Via AL1, Bairro Talatona, Luanda, Angola
+                      Província de Luanda, Município de Ingombota, Bairro Madeira, Rua n.º R10, Casa n.º 1255.
                     </p>
                   </div>
                 </div>
@@ -211,13 +185,13 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
 
                 {/* Simulated geographic names floating */}
                 <span className="absolute top-4 left-10 text-[9px] font-mono font-extrabold text-slate-500">
-                  VIA EXPRESSA AL1
+                  INGOMBOTA
                 </span>
                 <span className="absolute bottom-10 right-10 text-[9px] font-mono font-extrabold text-slate-500">
-                  BAIRRO TALATONA
+                  BAIRRO MADEIRA
                 </span>
                 <span className="absolute top-18 right-6 text-[8px] font-mono text-slate-600">
-                  ESTÁDIO 11 DE NOVEMBRO
+                  RUA N.º R10
                 </span>
 
                 {/* Headquarters Radar Pointer Indicator Pin */}
@@ -237,7 +211,7 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
                 {/* Map Directions overlay footer info banner */}
                 <div className="absolute bottom-2 left-2 right-2 bg-[#111111]/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/5 flex items-center justify-between shadow-xs">
                   <span className="text-[10px] text-slate-350 font-light truncate">
-                    Próximo à Rotunda do Ministério Público.
+                    Casa n.º 1255.
                   </span>
                   <a
                     href="https://maps.google.com"
@@ -362,7 +336,6 @@ export default function Contact({ prepopulatedMessage, onClearPrepopulate }: Con
                         <option value="Projetos de Arquitetura">Desenho / Fiscalização de Arquitetura</option>
                         <option value="Comércio Geral e Logística">Fornecimento de Consumíveis / TI</option>
                         <option value="Cotação Geral / Informações">Parcerias e Outras Informações</option>
-                        <option value="Simulação de Orçamento Integrada">Simulação de Orçamento Integrada</option>
                       </select>
                     </div>
 

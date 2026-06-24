@@ -24,7 +24,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
     { id: 'home', label: 'Início' },
     { id: 'services', label: 'Serviços' },
     { id: 'portfolio', label: 'Portfólio' },
-    { id: 'simulator', label: 'Simulador' },
+
     { id: 'about', label: 'Sobre Nós' },
     { id: 'contact', label: 'Contacto' },
   ];
@@ -54,10 +54,10 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
               <Logo className="h-20 sm:h-12" />
               <div className="ml-2 hidden sm:block">
                 <span className="text-[10px] block font-semibold text-brand-teal tracking-wider uppercase">
-                  W. REGO Lda
+                  W.L. REGO Lda
                 </span>
                 <span className="text-[8px] block text-gray-400 tracking-widest font-bold">
-                  COMÉRCIO GERAL & SERVIÇOS
+                  COMÉRCIO GERAL & PRESTAÇÃO DE SERVIÇOS
                 </span>
               </div>
             </div>
@@ -92,14 +92,6 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
             {/* CTA Actions */}
             <div className="hidden md:flex items-center space-x-3">
               <button
-                onClick={() => handleLinkClick('simulator')}
-                className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-brand-teal hover:bg-brand-teal hover:text-white border border-brand-teal/40 rounded-lg transition-all uppercase tracking-wide"
-              >
-                <Calculator className="w-3.5 h-3.5" />
-                <span>Simular Orçamento</span>
-              </button>
-              
-              <button
                 onClick={() => handleLinkClick('contact')}
                 className="flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold text-black bg-brand-teal hover:bg-brand-green rounded-lg shadow-md transition-all uppercase tracking-wider"
               >
@@ -110,13 +102,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
 
             {/* Mobile Menu Button */}
             <div className="flex md:hidden items-center space-x-2">
-              <button
-                onClick={() => handleLinkClick('simulator')}
-                className="p-1.5 text-brand-teal hover:bg-black/5 rounded-lg transition-colors"
-                title="Simular Orçamento"
-              >
-                <Calculator className="w-5 h-5" />
-              </button>
+
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-1.5 text-gray-600 hover:bg-black/5 rounded-lg transition-colors"
@@ -155,7 +141,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
                 <div className="flex items-center">
                   <Logo className="h-7" />
                   <span className="ml-2 font-display font-bold text-gray-900 text-sm">
-                    W. REGO Lda
+                    W.L. REGO Lda
                   </span>
                 </div>
                 <button
@@ -189,13 +175,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
 
               {/* Action indicators at bottom of drawer */}
               <div className="p-4 border-t border-gray-200 space-y-2 bg-gray-100">
-                <button
-                  onClick={() => handleLinkClick('simulator')}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-brand-teal/10 hover:bg-brand-teal/20 text-brand-teal text-xs font-semibold rounded-xl transition-all"
-                >
-                  <Calculator className="w-4 h-4" />
-                  <span>Simulador de Orçamento</span>
-                </button>
+
                 <button
                   onClick={() => handleLinkClick('contact')}
                   className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-brand-teal text-black hover:bg-brand-green text-xs font-extrabold rounded-xl shadow-md transition-all"

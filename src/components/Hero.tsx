@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Network, Building2, ShoppingCart, ShieldCheck, ArrowRight, CheckCircle2 } from 'lucide-react';
-import heroEngineer from '../assets/images/hero-engineer.jpg';
+import heroEngineer from '../assets/images/engenheira.png';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -12,21 +12,21 @@ export default function Hero({ onNavigate }: HeroProps) {
 
   const pillars = [
     {
-      icon: <Network className="w-5 h-5 text-brand-teal" />,
-      title: 'Redes e TI',
-      desc: 'Cablagem, CFTV, Bastidores, Wi-Fi 6',
+      icon: <Building2 className="w-5 h-5 text-brand-teal" />,
+      title: 'Infraestruturas',
+      desc: 'Obras Públicas, Saneamento, Projetos',
       color: 'bg-teal-500/10 border-brand-teal/20 hover:border-brand-teal/50'
     },
     {
-      icon: <Building2 className="w-5 h-5 text-brand-green" />,
-      title: 'Arquitetura',
-      desc: 'Projetos 3D, Engenharia, Obras',
+      icon: <Network className="w-5 h-5 text-brand-green" />,
+      title: 'Tecnologia',
+      desc: 'Software, Telecomunicações, Impressão',
       color: 'bg-green-500/10 border-brand-green/20 hover:border-brand-green/50'
     },
     {
       icon: <ShoppingCart className="w-5 h-5 text-indigo-500" />,
-      title: 'Comércio Geral',
-      desc: 'Importação, Fornecimento TI',
+      title: 'Fornecimento',
+      desc: 'Bens Essenciais, Material Escritório',
       color: 'bg-indigo-500/10 border-indigo-500/20 hover:border-indigo-500/50'
     }
   ];
@@ -46,15 +46,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           
           {/* Text and Main Value Prop */}
           <div className="lg:col-span-7 space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-white border border-gray-200 px-3 py-1.5 rounded-full text-brand-teal text-xs font-semibold tracking-wide"
-            >
-              <ShieldCheck className="w-4 h-4 text-[#00969B]" />
-              <span>Soluções Multidisciplinares de Excelência</span>
-            </motion.div>
+            
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -71,7 +63,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg text-gray-600 max-w-2xl font-light leading-relaxed"
             >
-              A <strong>W. REGO Lda</strong> é o seu parceiro empresarial de confiança em Angola. Integramos tecnologia de ponta em telecomunicações e redes, designs surpreendentes de arquitetura e planeamento civil estruturado, aliados a uma logística robusta de comércio geral.
+              A <strong>W.L. REGO - COMÉRCIO GERAL & PRESTAÇÃO DE SERVIÇOS, LDA</strong> é o seu parceiro empresarial de confiança em Angola. Soluções integradas à medida das exigências da administração pública e privada, garantindo excelência e sustentabilidade para o desenvolvimento do seu município.
             </motion.p>
 
             {/* Micro-checks list */}
@@ -83,19 +75,19 @@ export default function Hero({ onNavigate }: HeroProps) {
             >
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4.5 h-4.5 text-brand-teal shrink-0" />
-                <span>Instalação de Redes e Fibra Certificadas</span>
+                <span>Infraestruturas e Obras Públicas</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4.5 h-4.5 text-brand-green shrink-0" />
-                <span>Arquitetura Civil e Modelagem Renders 3D</span>
+                <span>Serviços Urbanos e Manutenção</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4.5 h-4.5 text-brand-teal shrink-0" />
-                <span>Fornecimento Informático Especializado</span>
+                <span>Tecnologia e Modernização</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4.5 h-4.5 text-brand-green shrink-0" />
-                <span>Presença Digital e Transparência</span>
+                <span>Desenvolvimento Social e Fornecimento</span>
               </div>
             </motion.div>
 
@@ -114,12 +106,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
               
-              <button
-                onClick={() => onNavigate('simulator')}
-                className="flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-gray-300 text-gray-700 font-bold text-sm rounded-xl hover:bg-gray-100 transition-all shadow-xs uppercase tracking-wide"
-              >
-                <span>Simular Orçamentos</span>
-              </button>
+
             </motion.div>
 
             {/* Horizontal divisions badge list */}
